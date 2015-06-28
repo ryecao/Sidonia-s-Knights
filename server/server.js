@@ -95,7 +95,6 @@ var gb_uname;
 var init_score;
 
 app.post('/login', function(req, res){
-  console.log(req.body);
   if (req.body.type ==="Login") {
     authenticate(req.body.username, req.body.password, function(err, user){
       if (user) {
@@ -109,7 +108,6 @@ app.post('/login', function(req, res){
         req.session.success = 'Authenticated as ' + user.name
         + ' click to <a href="/logout">logout</a>. '
         gb_uname = user.name;
-        console.log(user);
         init_score = user.score;
         res.redirect('./index');
       });
@@ -143,7 +141,6 @@ app.post('/login', function(req, res){
       req.session.success = 'Registered as ' +  req.body.username;
 
       res.redirect('/login');
-      console.log(users);
     }
 
   }
