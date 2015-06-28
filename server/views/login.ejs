@@ -1,0 +1,35 @@
+<% var title = "Sidonia's Knights" %>
+<% include head %>
+
+<h1>Login</h1>
+ <div class="wrapper">
+  <div class="container">
+<%- message %>
+
+<form method="post" action="/login">
+  <p>
+    <input type="text" name="username" placeholder="USERNAME">
+  </p>
+  <p>
+    <input type="text" name="password" placeholder="PASSWORD">
+  </p>
+  <p>
+    <input type="submit" name="type" value="Login">
+    <input type="submit" name="type" value="Register">
+  </p>
+</form>
+</div>
+  <ul class="bg-bubbles">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>
+<% include foot %>
